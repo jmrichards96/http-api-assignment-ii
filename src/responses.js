@@ -46,10 +46,10 @@ const getUsers = (request, response) => {
 };
 
 // get meta info about user object
-// should calculate a 200 
+// should calculate a 200
 const getUsersMeta = (request, response) => {
-  //return 200 without message, just the meta data
-  return respondJSONMeta(request, response, 200);
+  // return 200 without message, just the meta data
+  respondJSONMeta(request, response, 200);
 };
 
 // function to add a user from a POST body
@@ -98,19 +98,19 @@ const addUser = (request, response, body) => {
 
 // function for 404 not found requests with message
 const notFound = (request, response) => {
-  //create error message for response
+  // create error message for response
   const responseJSON = {
     message: 'The page you are looking for was not found.',
     id: 'notFound',
   };
 
-  //return a 404 with an error message
+  // return a 404 with an error message
   respondJSON(request, response, 404, responseJSON);
 };
 
 // function for 404 not found without message
 const notFoundMeta = (request, response) => {
-  //return a 404 without an error message
+  // return a 404 without an error message
   respondJSONMeta(request, response, 404);
 };
 
